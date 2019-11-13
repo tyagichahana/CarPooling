@@ -1,0 +1,14 @@
+$columns: 12;
+$size: 100;
+$i: 1;
+
+@while $i <= $columns {
+    .col-#{$i} {
+        padding-left: 15px;
+        padding-right: 15px;
+        flex: 0 0 percentage($i / $columns);
+        max-width: percentage($i / $columns);
+    }
+
+    $i: $i + 1;
+}
