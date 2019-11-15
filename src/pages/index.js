@@ -6,9 +6,9 @@ import history from "@/utils/history";
 import "./index.css";
 
 // Import all pages
-import Login from "./Login";
+import Login from "./login";
 import Register from "./Register";
-import Pool from "./Pool";
+import Pool from "./pool";
 
 const urlPatterns = [
   {
@@ -19,7 +19,7 @@ const urlPatterns = [
   {
     path: "/register",
     component: Register,
-    title: "SignUp"
+    title: "Register"
   },
   {
     path: "/pool",

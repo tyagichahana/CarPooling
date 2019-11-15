@@ -1,10 +1,17 @@
 import React, { useState } from "react";
-import { Link, Redirect } from "react-router-dom";
-// import connectComponent from "../../connect";
-// import { loginAction } from '../../actions/User'
-import "./index.scss";
+import connectComponent from "../connect";
+import { loginAction } from '../actions/User'
+import "./styles.scss";
 
-const Login = () => {
+const Login = (props) => {
+  const{redirect}=props.login;
+  if(redirect){
+    window.location.href="/pool"
+  }
+  const handleLoginAction=(e)=>{
+    e.preventDefault();
+    loginAction()
+  }
   return (
     <div>
       <div className="header">
@@ -12,7 +19,7 @@ const Login = () => {
         <div className="heading">Login To App</div>
       </div>
       <div className="form">
-        <form className="card-panel z-depth-0">
+        <form method="post" className="card-panel z-depth-0" onSubmit={handleLoginAction}>
           <div className="input-field ">
             <label htmlFor="usename" className="active">
               Email
@@ -39,7 +46,7 @@ const Login = () => {
             </a>
           </div>
           <div className="center-align">
-            <button type="submit" className="btn blue">
+            <button type="submit" className="btn blue" >
               Login
             </button>
           </div>
@@ -54,4 +61,4 @@ const Login = () => {
     </div>
   );
 };
-export default Login;
+export default connectComponent(Login);

@@ -1,0 +1,64 @@
+.header {
+  height: 70px;
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+
+  .Carlogo {
+    background: url("../assets/carlogo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 60px;
+    height: 60px;
+    margin: 0 5px;
+  }
+
+  .heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 5px;
+  }
+}
+
+.form {
+  margin-top: 100px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pool-container {
+  background: #e0e0e0;
+  padding: 30px;
+}
+.pool-list {
+  padding: 30px;
+}
+.pool-itemSelect {
+  cursor: pointer;
+  &:hover {
+    border-color: #2196f3 !important;
+  }
+  &.active {
+    border-color: #2196f3 !important;
+  }
+}
+.confirm-box {
+  position: fixed;
+  bottom: -100%;
+  z-index: 200;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  transition: all 0.4s;
+  text-align: center;
+  padding: 30px;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.02);
+
+  &.active {
+    bottom: 0;
+  }
+}
